@@ -27,4 +27,16 @@ Este programa permite ampliar su funcionalidad mucho, incluyendo ayuda a revisi�
 
 Precisamente esta característica anterior se tomó como modelo para una nueva generación de programas para realizar todo el trabajo de desarrollar un programa.
 
-Al principio, un entorno de desarrollo podría manejar un solo lenguaje de programación.
+Al principio, un entorno de desarrollo podría manejar un solo lenguaje de programación. Algunos todavía están indicados para un solo lenguaje. Pero otros pueden utilizarse para escribir en diversos lenguajes, gracias al uso de plugins.
+
+Uno de los IDE más usados en la actualidad es **Visual Studio Code** (de *Microsoft*).
+
+![VS Code](Imagenes/vscode.png)
+
+En nuestras clases usaremos principalmente **Atom**, que también admite, como el anterior, múltiples lenguajes, y se puede expandir con una gran cantidad de plugins.
+
+![Atom](Imagenes/Atom-IDE.png)
+
+Parecidos a los anteriores, pero que solamente se pueden usar con un lenguaje específico son **IntelliJ** (para **Java**) o **CLion** (para **C** y **C++**), de la compañía *JetBrains*.
+
+Los IDE actuales suelen interactuar con los *repositorios* de software online, lo cual facilita realizar el trabajo colaborativamente, y poder usar distintas máquinas según donde estemos. Tanto **VS Code** como **Atom** se pueden conectar con **GitHub**, para guardar nuestro trabajo en la nube.
