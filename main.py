@@ -6,7 +6,6 @@ funciones_ejemplo.tabla_multiplicar(4)
 
 import pygame
 import os
-os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 pygame.init()
 
