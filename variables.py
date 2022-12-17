@@ -181,7 +181,7 @@ texto[0]
     [comienzo : final : intervalo] (en inglés es [start : stop : step] )
 
 
-El intervalo qué se recibe es semi-abierto (indice_primero, indice_segundo], es decir se incluye el primero y no el segundo valor. Se admiten números negativos, que contabilizan desde el final.
+El intervalo que se recibe es semi-abierto (indice_primero, indice_segundo], es decir se incluye el primero y no el segundo valor. Se admiten números negativos, que contabilizan desde el final.
 """
 
 texto[:]
