@@ -14,7 +14,7 @@ Son símbolos especiales para hacer operaciones con datos. Los más comunes son 
 
 Hay operadores matemáticos, como sumar o restar, y otros de comparación (mayor que y menor que). Otros comparadores son lógicos, y en Python se utilizan las palabras reservadas **and**, **or** y **not** para ello. Por último, existen los comparadores de *asignación*, como el signo **=**, que permite transferir un valor a una *variable*.
 
-### Variables 
+### Variables
 
 Una variable es un espacio que reservamos en la memoria del ordenador para guardar datos. A ese espacio le damos un nombre para poder usarlo en el programa. El nombre no puede ser una palabra reservada.
 
