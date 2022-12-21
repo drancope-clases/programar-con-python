@@ -46,7 +46,7 @@ Existen distintos tipos de variables:
 Y estructuras de datos, como:
   - list: lista de elementos (de cualquier tipo, incluida otra lista)
   - dict: "diccionario", conjunto de pares llave:valor
-  
+
 Veamos un primer ejemplo
 """
 
@@ -128,17 +128,17 @@ a = 'testing'
 
 print('test' in a)
 
-"""Los operadores disponibles son: 
+"""Los operadores disponibles son:
 
     Relacionales:
     - >= , <=, <, > : Mayor o igual, menor o igual, mayor o menor
     - != , == : Distinto, Igual
-    - in : Contenido por 
+    - in : Contenido por
     Lógicos:
     - not o ~ : Negación
     - and o & : Ambas verdaderas
     - or o | : Una u otra es verdadera
-    
+
 Como booleanos, se pueden utilizar tanto 0 y 1 como True y False.
 
 # Ejercicios <a name="section-3"></a>
@@ -173,14 +173,14 @@ texto[0]
 
 - El parámetro comienzo (start) indica la primera posición incluida en la selección, por default es 0.
 
-- El parámetro final (stop) es la primera posición que NO va a estar incluída, por default se incluyen todos los elementos. 
+- El parámetro final (stop) es la primera posición que NO va a estar incluída, por default se incluyen todos los elementos.
 
 - El parámetro intervalo o paso (step), es optativo e indica el tamaño del paso entre seleccionar un elemento y el siguiente, por default el paso es 1. El paso también puede ser negativo, en este caso contamos desde el final hacia el comienzo, esto es muy útil para dar vuelta los strings...
 
-    
+
     [comienzo : final : intervalo] (en inglés es [start : stop : step] )
-    
-    
+
+
 El intervalo que se recibe es semi-abierto (indice_primero, indice_segundo], es decir se incluye el primero y no el segundo valor. Se admiten números negativos, que contabilizan desde el final.
 """
 
@@ -192,7 +192,7 @@ texto[1:4]
 
 texto[::-1]
 
-"""Ejercicio 
+"""Ejercicio
 
 1- Dado ese string devuelvan únicamente la palabra python usando slicing
 """
@@ -262,7 +262,7 @@ amigos = ['Mateo', 'Nico', 'Claudia', 'Ernestina', 'Paola']
 
 """### Indexing y slicing en listas
 
-De la misma forma que con los strings en el contexto de la listas generalmente hablamos de **indexación** o acceso por índice a la acción de encontrar un valor según su posición en la lista. 
+De la misma forma que con los strings en el contexto de la listas generalmente hablamos de **indexación** o acceso por índice a la acción de encontrar un valor según su posición en la lista.
 
 Importantísimo (sí, ¡una vez más!): En Python el primer elemento se indexa con el valor 0. Es decir, si queremos el primer valor de una lista tenemos que llamar a la posición 0.
 """
@@ -290,7 +290,7 @@ amigos[::2] # salteamos un elemento a la vez
 
 """Ejercicios:
 
-1- ¿Es el resultado de amigos[:1] igual al de acceder directamente a la primera posición? 
+1- ¿Es el resultado de amigos[:1] igual al de acceder directamente a la primera posición?
 
 2- Recorrer la lista de elementos de atrás para adelante.
 
@@ -381,8 +381,8 @@ Los diccionarios consisten en estructuras que contienen pares de una **llave** y
 Veamos un ejemplo
 """
 
-dnis = {'Herrera':32676585, 'Guzmán':9564787, 
-        'Pérez':5676898, 'Hernández':40565999, 
+dnis = {'Herrera':32676585, 'Guzmán':9564787,
+        'Pérez':5676898, 'Hernández':40565999,
         'Abraham':28375814,
        "soy_una_llave":"soy_un_valor"}
 
@@ -423,10 +423,10 @@ El condicional tiene la siguiente sintáxis:
         código2
     else:
         código3
-        
+
 Donde la condición es un operador que devuelve un objeto de tipo booleano. La **indentación** del código define qué parte se incluye como condicional.
 
-El término "elif" viene de "else if". La condición sólo se evaluará si la condición del "if" no se cumple. 
+El término "elif" viene de "else if". La condición sólo se evaluará si la condición del "if" no se cumple.
 """
 
 precio_dolar = 62
@@ -435,7 +435,7 @@ if precio_dolar >= 90:
     print("El dólar se fue por las nubes")
 elif (precio_dolar < 90) and (precio_dolar >= 70):
     print("El dolar subió")
-else: 
+else:
     print("El dólar es menor a 70")
 
 print(precio_dolar)
@@ -511,7 +511,7 @@ while contador < 20:
 - [StackOverflow](https://stackoverflow.com)
 - [Google Colab](https://colab.research.google.com)
 - [Slicing](https://python-reference.readthedocs.io/en/latest/docs/brackets/slicing.html)
---- 
+---
 
 ## Tips en la práctica
 
