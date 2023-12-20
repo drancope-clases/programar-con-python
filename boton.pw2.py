@@ -5,7 +5,7 @@ import pygame
 from pygame_widgets.button import Button
 
 FPS = 30
-motor = True
+# motor = True
 catx = 5
 caty = 380
 pared = [False, (440, 400, 120, 20)]
@@ -16,31 +16,45 @@ posicion = [5,380]
 
 import clases_pw as cpw
 
-def boton_click():
-    global motor, pared, colorPared
-    if pared[0]:
-        colorPared = (0,0,0)
-        motor = True
-    else:
-        colorPared= (255,255,255)
-    pared[0] = not(pared[0])
-
 pygame.init()
 win = pygame.display.set_mode((600, 600))
 
 tank = cpw.robot(posicion)
+def detectar_pared(pared, catx, caty):
+    if pared[0]:
+        if catx > 450:
+            d = pared[1][1]-120 -caty
+            if d>0:
+                return d, pared
+    return 200, pared
+
+def detectar_bordes(tank):
+    if tank.motor == False:
+        return tank.direccion
+    else:
+        if tank.direccion == 'right':
+            if tank.posicion[0] >= 475:
+                tank.direccion = tank.rotar('down')
+        elif tank.direccion == 'down':
+            if tank.posicion[1] >= 480:
+                tank.direccion = tank.rotar('left')
+        elif tank.direccion == 'left':
+            if tank.posicion[0] <= 5:
+                tank.direccion = tank.rotar('up')
+        elif tank.direccion == 'up':
+            if tank.posicion[1] <= 5:
+                tank.direccion = tank.rotar('right')
+    return tank.direccion
 
 def boton_click():
-    global motor, pared, colorPared
+    global pared, colorPared #, motor
     if pared[0]:
         colorPared = (0,0,0)
-        motor = True
+#        motor = True
     else:
         colorPared= (255,255,255)
     pared[0] = not(pared[0])
 
-
-#button = Button(win, 10, 400, 118, 100, image=catImg, onClick=lambda: boton_click())
 button2 = Button(win, 200, 200, 108, 60, text='Pared',
                onClick=lambda: boton_click())
 fpsClock = pygame.time.Clock()
@@ -64,6 +78,7 @@ while run:
         tank.avanzar()
         x = tank.posicion[0]
         y = tank.posicion[1]
+        tank.direccion = detectar_bordes(tank)
         win.blit(tank.imagen, (x, y))
         pygame_widgets.update(events)
         pygame.display.update()

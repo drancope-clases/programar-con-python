@@ -39,7 +39,7 @@ def detectar_bordes(direction, motor, catx, caty, catImg):
 class robot:
     motor = False
     posicion = [0,0]
-    imagen = pygame.image.load('/home/drancope/Imágenes/tank_sprite2.jpeg')
+    imagen = pygame.image.load('Imagenes/tank_sprite2.jpeg')
     direccion = 'up'
     def __init__(self, pos):
         self.posicion = pos
@@ -50,8 +50,29 @@ class robot:
         self.posicion[0] =  x
         self.posicion[1] =  y
     def rotar(self, direccion):
-        self.imagen = pygame.transform.rotate(self.imagen, direccion)
+        angulo = 0
+        angulo2 = 0
+        if self.direccion == 'up':
+            angulo = 0
+        elif self.direccion == 'right':
+            angulo = 270
+        elif self.direccion == 'down':
+            angulo = 180
+        elif self.direccion == 'left':
+            angulo = 90
+        if direccion == 'up':
+            angulo2 = 0
+        elif direccion == 'right':
+            angulo2 = 270
+        elif direccion == 'down':
+            angulo2 = 180
+        elif direccion == 'left':
+            angulo2 = 90
+        angulo = angulo2 - angulo
+        self.imagen = pygame.transform.rotate(self.imagen, angulo)
         self.direccion = direccion
+        return self.direccion
+
     def encender(self):
         self.motor = True
     def avanzar(self):
@@ -64,8 +85,8 @@ class robot:
                 self.posicion[0] -= 5
             elif self.direccion == 'up':
                 self.posicion[1] -= 5
-            return [10, 10]
-        print(self.motor, self.direccion, self.posicion)
+            return [self.direccion, self.posicion]
+        #print(self.motor, self.direccion, self.posicion)
         return [0,0]
     def actualizar():
         avanzar()
