@@ -30,7 +30,7 @@ def boton_click():
         colorPared= (255,255,255)
     pared[0] = not(pared[0])
 
-catImg = pygame.image.load('Imagenes/herramientas.png')
+catImg = pygame.image.load('Imagenes/tank_sprite2.jpeg')
 #button = Button(win, 10, 400, 118, 100, image=catImg, onClick=lambda: boton_click())
 button2 = Button(win, 200, 200, 108, 60, text='Pared',
                onClick=lambda: boton_click())
